@@ -55,6 +55,21 @@ int main (int argc, char *argv[])
             scanf("%d", &base);
                 getchar();
 
+                if (base > 999999) {
+                    printf("\n");
+                    printf("========================================================================\n");
+                    printf("\n");
+                    printf(CLR_ROUGE "   La valeur entree est trop grande.\n" RESET);
+                    printf("\n");
+                    printf("========================================================================\n");
+                    printf("\n");
+                    printf("Appuyez sur ENTER pour quitter le programme."); 
+                    printf("\n");
+                    getchar();
+                    return 0;
+                }
+
+
     printf("\n");
 
     int hauteur;    
@@ -62,17 +77,32 @@ int main (int argc, char *argv[])
             scanf("%d", &hauteur);
                 getchar();
 
-        if (hauteur == 67 && base == 67) {
-            return 0;  
-        }
+                if (hauteur > 999999) {
+                    printf("\n");
+                    printf("========================================================================\n");
+                    printf("\n");
+                    printf(CLR_ROUGE "   La valeur entree est trop grande.\n" RESET);
+                    printf("\n");
+                    printf("========================================================================\n");
+                    printf("\n");
+                    printf("Appuyez sur ENTER pour quitter le programme."); 
+                    printf("\n");
+                    getchar();
+                    return 0;
+                }
+
+                if (hauteur == 67 && base == 67) {
+                    return 0;  
+                }
+                
 
         int multiplication = base * hauteur;
-        int air = multiplication / 2;
+        float aire = multiplication / 2.0;
 
         printf("\n");
         printf("========================================================================\n");
 
-                if (air == 0 || air < 0) {
+                if (aire == 0 || aire < 0) {
                     printf("\n");
                     printf(CLR_ROUGE "   Une erreur s'est produite.\n" RESET);
                     printf("\n");
@@ -85,7 +115,7 @@ int main (int argc, char *argv[])
 
                 } else {
                     printf("\n");
-                    printf(VERT "   L'aire de votre triangle est egale a %d\n" RESET, air);  
+                    printf(VERT"   L'aire de votre triangle est egale a %f\n" RESET, aire);  
                     printf("\n");
                     printf("========================================================================\n");
                     printf("\n");
@@ -93,8 +123,8 @@ int main (int argc, char *argv[])
                     printf("\n");
                     getchar();
                     return 0;
-                }
-        
+                }     
+                
      printf("========================================================================\n");
     printf("\n");
 
